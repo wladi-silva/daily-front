@@ -1,0 +1,152 @@
+.container-phase-button {
+    left: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    position: relative;
+}
+
+.container-phase-button-align {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.phase-button-icon {
+    height: 34px;
+    left: 14px;
+    position: absolute;
+    top: 11.5px;
+    width: 42px;
+}
+
+.phase-button {
+    color: var(--phase-bg-color);
+    height: 65px;
+    position: relative;
+    width: 70px;
+    z-index: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    transition: filter .2s;
+}
+
+.phase-button::after {
+    background-color: var(--phase-bg-color);
+    border-radius: 50% / 50%;
+    box-shadow: 0 8px 0 var(--phase-border-color-dark);
+    height: 57px;
+    top: 0;
+}
+
+.phase-button:after,
+.phase-button:before {
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.phase-button:active::after {
+    transform: translateY(6px); 
+    box-shadow: none;
+}
+
+.phase-button:active span,
+.phase-button:active img,
+.phase-button:active svg {
+    transform: translateY(6px);
+}
+
+.phase-button:active {
+    transform: translateY(0); 
+}
+
+.container-principal {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    position: relative;
+}
+
+.section-image {
+    width: auto;
+    height: auto;
+    position: absolute;
+    overflow: hidden;
+}
+
+.image-position-one {
+    top: 140px;
+    left: calc(50% - 5px);
+}
+
+.image-position-two {
+    top: 596.208px;
+    right: calc(50% - 10px);
+}
+    
+.section-image img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    transform: none;
+    content-visibility: visible;
+    object-fit: contain;
+}
+
+.phase-button:nth-child(1) {
+    left: 0px;
+    margin-top: 24px;
+}
+
+.phase-button:nth-child(2) {
+    left: -44.884px;
+    margin-top: 11.8533px;
+}
+
+.phase-button:nth-child(3) {
+    left: -70px;
+    margin-top: 20.3826px;
+}
+
+.phase-button:nth-child(4) {
+    left: -44.884px;
+    margin-top: 20.3826px;
+}
+
+.phase-button:nth-child(5) {
+    left: 0px;
+    margin-top: 11.8533px;
+}
+
+.phase-button:nth-child(6) {
+    left: 44.884px;
+    margin-top: 11.8533px;
+}
+
+.phase-button:nth-child(7) {
+    left: 70px;
+    margin-top: 20.3826px;
+}
+
+.phase-button:nth-child(8) {
+    left: 44.884px;
+    margin-top: 20.3826px;
+}
+
+.phase-button:nth-child(9) {
+    left: 0px;
+    margin-top: 24px;
+}
+
+.b-none {
+    border: none;
+}
+
+.bg-none {
+    background-color: transparent;
+}

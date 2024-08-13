@@ -1,0 +1,60 @@
+body {
+    background: #ffffff;
+    color: #3c3c3c;
+    font: 500 17px / 20px sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --phase-bg-color: #58cc02;
+    --phase-border-color: #4aab01; 
+    --phase-text-color: #ffffff; 
+    --phase-border-color-dark: #3b8c00; 
+    --phase-icon-bg-color: #58cc02; 
+    --phase-icon-border-color: #3b8c00; 
+}
+
+.phase-color-green {
+    --phase-bg-color: #58cc02;
+    --phase-border-color: #4aab01; 
+    --phase-text-color: #ffffff; 
+    --phase-border-color-dark: #3b8c00; 
+    --phase-icon-bg-color: #58cc02; 
+    --phase-icon-border-color: #3b8c00; 
+}
+
+.phase-color-red {
+    --phase-bg-color: #ff4b4b; 
+    --phase-border-color: #cc0000; 
+    --phase-text-color: #ffffff;
+    --phase-border-color-dark: #990000; 
+    --phase-icon-bg-color: #ff4b4b;
+    --phase-icon-border-color: #990000;
+}
+
+.phase-color-orange {
+    --phase-bg-color: #ff9600; 
+    --phase-border-color: #cc7a00; 
+    --phase-text-color: #ffffff;
+    --phase-border-color-dark: #996600;
+    --phase-icon-bg-color: #ff9600;
+    --phase-icon-border-color: #996600;
+}
+
+.phase-color-blue {
+    --phase-bg-color: #1cb0f6; 
+    --phase-border-color: #0073e6; 
+    --phase-text-color: #ffffff;
+    --phase-border-color-dark: #005bb5; 
+    --phase-icon-bg-color: #1cb0f6;
+    --phase-icon-border-color: #005bb5;
+}
+
+.phase-color-pink {
+    --phase-bg-color: #ff86d0; 
+    --phase-border-color: #cc6c9a; 
+    --phase-text-color: #ffffff;
+    --phase-border-color-dark: #a64d80; 
+    --phase-icon-bg-color: #ff86d0;
+    --phase-icon-border-color: #a64d80;
+}

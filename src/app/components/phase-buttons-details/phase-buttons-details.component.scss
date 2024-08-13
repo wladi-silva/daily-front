@@ -1,0 +1,61 @@
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0); 
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px); 
+    }
+}
+
+.div-container-init {
+    left: 50%;
+    position: absolute;
+    z-index: 0;
+    bottom: 60px;
+    transform: translateX(-50%);
+    box-sizing: inherit;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(229, 229, 229);
+    border-radius: 10px 15px;
+    box-sizing: border-box;
+    overflow: visible;
+    animation: bounce 2.5s infinite;
+}
+
+.div-content-init {
+    color: var(--phase-bg-color);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 1;
+    padding: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: sans-serif;
+}
+
+.div-container-complement {
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 0px; 
+    width: 0;
+    height: 0;
+}
+
+.div-content-complement {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgb(255, 255, 255); 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2px;
+}
