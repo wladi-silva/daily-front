@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { PhaseButtonsComponent } from "../phase-buttons/phase-buttons.component";
+import { MenuScoresComponent } from "../menu-scores/menu-scores.component";
 
 @Component({
   selector: 'app-phase',
   standalone: true,
-  imports: [CommonModule, PhaseButtonsComponent],
+  imports: [CommonModule, PhaseButtonsComponent, MenuScoresComponent],
   templateUrl: './phase.component.html',
   styleUrls: ['./phase.component.scss']
 })
