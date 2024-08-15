@@ -1,9 +1,11 @@
-@for (phase of phases; track $index) {
-    <div>
-        <app-phase
-            [currentPhaseClass]="phase.currentPhaseClass"
-            [title]="phase.title"
-            [subtitle]="phase.subtitle">
-        </app-phase>
-    </div>
-}
+<div class="section-content-offset">
+    @for (phase of phases; track $index) {
+        <div>
+            <app-phase
+                [currentPhaseClass]="phase.currentPhaseClass"
+                [title]="phase.title"
+                [subtitle]="phase.subtitle">
+            </app-phase>
+        </div>
+    }    
+</div>

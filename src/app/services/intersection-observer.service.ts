@@ -6,15 +6,14 @@ import { Subject } from 'rxjs';
 })
 export class IntersectionObserverService {
 
-  private colorSubject = new Subject<string>();
+  private colorSubject = new Subject<{ backgroundColor: string, borderColor: string }>();
   private observer: IntersectionObserver | undefined;
   color$ = this.colorSubject.asObservable();
 
   constructor() { }
 
   observeElement(elementClass: string): void {
-    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-      const element = document.querySelector(`.${elementClass}`);
+    const element = document.querySelector(`.${elementClass}`);
       if (element) {
         this.observer = new IntersectionObserver(entries => {
           entries.forEach(entry => {
@@ -26,7 +25,6 @@ export class IntersectionObserverService {
         }, { threshold: [0, 1] });
         this.observer.observe(element);
       }
-    }
   }
 
   disconnectObserver(): void {
@@ -35,11 +33,16 @@ export class IntersectionObserverService {
     }
   }
 
-  private getColorFromElement(element: Element): string {
-    return getComputedStyle(element).getPropertyValue('--phase-bg-color').trim();
+  private getColorFromElement(element: Element): { backgroundColor: string, borderColor: string } {
+    const computedStyle = getComputedStyle(element);
+    return {
+      backgroundColor: computedStyle.getPropertyValue('--phase-bg-color').trim(),
+      borderColor: computedStyle.getPropertyValue('--phase-border-color-dark').trim()
+    };
   }
+  
 
-  private isElementAtTop(rect: DOMRect): boolean {
+  public isElementAtTop(rect: DOMRect): boolean {
     return rect.top <= 0 && rect.bottom >= 0;
   }
 

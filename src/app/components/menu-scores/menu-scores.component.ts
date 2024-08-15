@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { IntersectionObserverService } from '../../services/intersection-observer.service';
 
@@ -8,23 +8,17 @@ import { IntersectionObserverService } from '../../services/intersection-observe
   templateUrl: './menu-scores.component.html',
   styleUrls: ['./menu-scores.component.scss']
 })
-export class MenuScoresComponent implements OnInit, OnDestroy {
+export class MenuScoresComponent implements OnInit {
 
   @Input() currentPhaseClass: string = '';
-  colorSubscription: Subscription | undefined;
-  currentColor: string = '';
 
-  constructor(
-    private observerService: IntersectionObserverService,
-    private renderer: Renderer2,
-    private el: ElementRef
-  ) {}
+  private colorSubscription!: Subscription;
+
+  constructor(private observerService: IntersectionObserverService) {}
 
   ngOnInit(): void {
     this.colorSubscription = this.observerService.color$.subscribe(color => {
-      console.log('Received color:', color);
-      this.currentColor = color;
-      this.applyColorToDivMenuScore();
+      this.updateMenuColor(color);
     });
   }
 
@@ -34,11 +28,9 @@ export class MenuScoresComponent implements OnInit, OnDestroy {
     }
   }
 
-  private applyColorToDivMenuScore(): void {
-    const divMenuScore = this.el.nativeElement.querySelector('.div-menu-score');
-    if (divMenuScore) {
-      this.renderer.setStyle(divMenuScore, 'background-color', this.currentColor);
-    }
+  private updateMenuColor(colors: { backgroundColor: string, borderColor: string }): void {
+    document.documentElement.style.setProperty('--phase-bg-color', colors.backgroundColor);
+    document.documentElement.style.setProperty('--phase-border-color-dark', colors.borderColor);
   }
   
 }
