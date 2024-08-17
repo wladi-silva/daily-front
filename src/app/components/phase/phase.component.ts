@@ -33,11 +33,9 @@ export class PhaseComponent implements OnInit, OnDestroy, AfterViewInit {
               this.sendColorToAndroid();
             }
           });
-          
         }, { threshold: [0, 1] });
         this.observerService.observeElement(this.currentPhaseClass);
         this.observer.observe(element);
-
       }
     }
   }
