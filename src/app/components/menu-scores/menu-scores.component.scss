@@ -1,0 +1,74 @@
+.z-index-210 {
+    z-index: 210;
+}
+
+.nav-menu-score {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 210;
+    background-color: var(--phase-bg-color);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 0 0 2px;
+    border-color: var(--phase-border-color-dark);
+}
+
+.nav-menu-score a {
+    outline: none;
+    box-shadow: none;
+    transition: none;
+    user-select: none; 
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-menu-score a span {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    padding: 5px;
+}
+
+.div-menu-score {
+    align-items: center; 
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between; 
+    padding: 10px;
+}
+
+.div-menu-score a {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    text-decoration: none;
+    user-select: none;
+}
+
+.div-menu-score img, 
+.div-menu-score svg {
+    height: 25px;
+    width: 25px;
+    pointer-events: none;
+    border-style: none;
+    margin-bottom: 5px;
+}
+
+.section-title-score {
+    display: flex;
+
+    font-size: 17px;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.section-title-score svg {
+    margin-right: 15px;
+}
