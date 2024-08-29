@@ -2,9 +2,9 @@
     @for (phase of phases; track $index) {
         <div>
             <app-phase
-                [currentPhaseClass]="phase.currentPhaseClass"
                 [title]="phase.title"
-                [subtitle]="phase.subtitle">
+                [subtitle]="phase.subtitle"
+                [currentPhaseClass]="phase.className">
             </app-phase>
         </div>
     }    
