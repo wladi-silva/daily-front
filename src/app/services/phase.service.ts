@@ -13,8 +13,8 @@ export class PhaseService {
 
   constructor(private http: HttpClient) { }
 
-  getPhase(): Observable<Phase> {
-    return this.http.get<Phase>(`${this.apiUrl}/v1/phases`);
+  getPhase(): Observable<Phase[]> {
+    return this.http.get<Phase[]>(`${this.apiUrl}/v1/phases`);
   }
 
 }

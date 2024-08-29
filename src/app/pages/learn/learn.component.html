@@ -1,5 +1,5 @@
 <div class="section-content-offset">
-    @for (phase of phases; track $index) {
+    @for (phase of phases; track phase.title) {
         <div>
             <app-phase
                 [title]="phase.title"

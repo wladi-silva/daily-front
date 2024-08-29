@@ -18,12 +18,8 @@ export class LearnComponent implements OnInit {
   constructor(private phaseService: PhaseService) {}
 
   ngOnInit(): void {
-    this.phaseService.getPhase().subscribe((data: Phase) => {
-      this.phases.push({
-        title: data.title,
-        subtitle: data.subtitle,
-        className: data.className
-      });
+    this.phaseService.getPhase().subscribe((data: Phase[]) => {
+      this.phases = data;
     });
   }
   
